@@ -156,7 +156,7 @@ Columna valida tipos
 Matriz gestiona estructuras
 
 #### O (Open/Closed):
-Si necesitas nuevos tipos agregás otra clase TipoDato
+Si se necesitás nuevos tipos se puede agregar otra clase TipoDato
 
 #### L (Liskov):
 Todas las implementaciones de TipoDato funcionan igual
@@ -177,6 +177,6 @@ Representa un valor dentro de la matriz.
 * TipoDato
 Define como validar y convertir valores.
 ### Dificultades encontradas y cómo fueron resueltas
-* * La Matriz contenía columnas de distintos tipos(string, int, etc), lo que complicó el uso de genéricos directamente. Por lo que utilicé Columna<?> en la matriz, para manejar diferentes tipos de columnas
-* * Otro problema fue lograr que cada fila tenga la cantidad correcta de valores y tipos compatibles.
+* La Matriz contenía columnas de distintos tipos(string, int, etc), lo que complicó el uso de genéricos directamente. Por lo que utilicé Columna<?> en la matriz, para manejar diferentes tipos de columnas
+* Otro problema fue lograr que cada fila tenga la cantidad correcta de valores y tipos compatibles.
 Mi solución fue centralizar la clase Matriz, que verifica la cantidad de valores, y luego delegar en cada Columna la validación de tipos.
