@@ -1,1 +1,1 @@
-![alt text](diagrama-de-clases.png)
+![alt text](diagrama-test.jpg)
