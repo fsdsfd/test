@@ -150,7 +150,8 @@ Opté por una separación de clases y responsabilidades para aclarar más el có
 Definí clases como Matriz, Columna o TipoDeDato que permiten una estructuración prolija, evitando estructuras genéricas. Como List<List<Object>>
 Utilicé genéricos <T> en las columnas y celdas para mantener consistencia de tipos a la hora de ejecutar
 ### Justificación SOLID:
-S (Single Responsibility):
+
+#### S (Single Responsibility):
 Columna valida tipos
 Matriz gestiona estructuras
 
@@ -176,6 +177,6 @@ Representa un valor dentro de la matriz.
 * TipoDato
 Define como validar y convertir valores.
 ### Dificultades encontradas y cómo fueron resueltas
-> La Matriz contenía columnas de distintos tipos(string, int, etc), lo que complicó el uso de genéricos directamente. Por lo que utilicé Columna<?> en la matriz, para manejar diferentes tipos de columnas
-> Otro problema fue lograr que cada fila tenga la cantidad correcta de valores y tipos compatibles.
+* * La Matriz contenía columnas de distintos tipos(string, int, etc), lo que complicó el uso de genéricos directamente. Por lo que utilicé Columna<?> en la matriz, para manejar diferentes tipos de columnas
+* * Otro problema fue lograr que cada fila tenga la cantidad correcta de valores y tipos compatibles.
 Mi solución fue centralizar la clase Matriz, que verifica la cantidad de valores, y luego delegar en cada Columna la validación de tipos.
