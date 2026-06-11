@@ -153,13 +153,17 @@ Utilicé genéricos <T> en las columnas y celdas para mantener consistencia de t
 S (Single Responsibility):
 Columna valida tipos
 Matriz gestiona estructuras
-O (Open/Closed):
+
+#### O (Open/Closed):
 Si necesitas nuevos tipos agregás otra clase TipoDato
-L (Liskov):
+
+#### L (Liskov):
 Todas las implementaciones de TipoDato funcionan igual
-I (Interface Segregation):
+
+#### I (Interface Segregation):
 El trabajo tiene una interfaz simple y prolija
-D (Dependency Inversion):
+
+#### D (Dependency Inversion):
 Columna depende de TipoDato, no de clases concretas
 
 ### Responsabilidades de las principales clases.
@@ -172,6 +176,6 @@ Representa un valor dentro de la matriz.
 * TipoDato
 Define como validar y convertir valores.
 ### Dificultades encontradas y cómo fueron resueltas
-La Matriz contenía columnas de distintos tipos(string, int, etc), lo que complicó el uso de genéricos directamente. Por lo que utilicé Columna<?> en la matriz, para manejar diferentes tipos de columnas
-Otro problema fue lograr que cada fila tenga la cantidad correcta de valores y tipos compatibles.
+> La Matriz contenía columnas de distintos tipos(string, int, etc), lo que complicó el uso de genéricos directamente. Por lo que utilicé Columna<?> en la matriz, para manejar diferentes tipos de columnas
+> Otro problema fue lograr que cada fila tenga la cantidad correcta de valores y tipos compatibles.
 Mi solución fue centralizar la clase Matriz, que verifica la cantidad de valores, y luego delegar en cada Columna la validación de tipos.
